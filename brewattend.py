@@ -13,4 +13,16 @@ class CoffeeShopAttendanceTracker:
         
             }
             print(f"Employee '{employee_name}' added successfully.")
-            
+        else:
+            print(f"Employee with ID '{employee_id}' already exist.")
+
+    def clock_in(self, employee_id):
+        if employee_id in self.employees:
+            now = determine.now()
+            self.employees[employee_id]['attendance'].append({
+                'type': 'clock-in',
+                'timestamp': now
+
+                
+            })
+
