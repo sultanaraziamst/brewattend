@@ -45,4 +45,20 @@ class CoffeeShopAttendanceTracker:
             print(f"{data['name']} (ID: {employee_id}):")
             for attendance_record in data ['attendance']:
                 print(f" {attendance_record['type']} at {attendance_record ['timestamp']}")
+    def run(self):
+        print("Welcome to the Brewattend Tracker!")
+        while True:
+            print("\nMenu:")
+            print("1, Add Employee")
+            print("2. Clock-in") 
+            print("4. View Attendance")
+            print("5. Exit")
+            choice = input("Enter your choice (1-5): ") 
+
+            if choice == '1':
+                employee_id = input("Enter Employee ID: ")
+                employee_name = input("Enter employee name: ")
+                self.add_employees(employee_id=, employee_name)
+            elif choice == '2':
                 
+
