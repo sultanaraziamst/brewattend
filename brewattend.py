@@ -16,6 +16,7 @@ class CoffeeShopAttendanceTracker:
         else:
             print(f"Employee with ID '{employee_id}' already exist.")
 
+#Adding clock for employee checkin
     def clock_in(self, employee_id):
         if employee_id in self.employees:
             now = datetime.now()
@@ -29,6 +30,7 @@ class CoffeeShopAttendanceTracker:
         else:
             print(f" Employee with ID '{employee_id}' not found.")
 
+#Clock out for employee 
     def clock_out(self, employee_id):
         if employee_id in self.add_employees:
             now = datetime.now()
@@ -45,8 +47,11 @@ class CoffeeShopAttendanceTracker:
             print(f"{data['name']} (ID: {employee_id}):")
             for attendance_record in data ['attendance']:
                 print(f" {attendance_record['type']} at {attendance_record ['timestamp']}")
+
     def run(self):
+        #welcome note for the app
         print("Welcome to the Brewattend Tracker!")
+
         while True:
             print("\nMenu:")
             print("1. Add Employee")
@@ -54,7 +59,8 @@ class CoffeeShopAttendanceTracker:
             print("4. View Attendance")
             print("5. Exit")
             choice = input("Enter your choice (1-5): ") 
-
+            
+#enter the employee id
             if choice == '1':
                 employee_id = input("Enter Employee ID: ")
                 employee_name = input("Enter employee name: ")
@@ -79,7 +85,6 @@ class CoffeeShopAttendanceTracker:
 
 
 #Main Program 
-
 if __name__== "__main__":
     tracker = CoffeeShopAttendanceTracker()
     tracker.run()
