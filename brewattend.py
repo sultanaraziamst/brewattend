@@ -58,7 +58,18 @@ class CoffeeShopAttendanceTracker:
             if choice == '1':
                 employee_id = input("Enter Employee ID: ")
                 employee_name = input("Enter employee name: ")
-                self.add_employees(employee_id=, employee_name)
+                self.add_employees(employee_id, employee_name)
+
             elif choice == '2':
-                
+                employee_id = input("Enter employee ID: ")
+                self.clock_in(employee_id) 
+
+            elif choice =='3':
+                employee_id = input("Enter Employee ID: ")
+                self.clock_out(employee_id)
+            elif choice = '4':
+                self.view_attendance()
+            elif choice = '5':
+                print("Existing Brewattenend emplployee attendance tracker, good bye! ")
+
 
