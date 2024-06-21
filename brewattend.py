@@ -18,7 +18,7 @@ class CoffeeShopAttendanceTracker:
 
     def clock_in(self, employee_id):
         if employee_id in self.employees:
-            now = determine.now()
+            now = datetime.now()
             self.employees[employee_id]['attendance'].append({
                 'type': 'clock-in',
                 'timestamp': now
@@ -49,7 +49,7 @@ class CoffeeShopAttendanceTracker:
         print("Welcome to the Brewattend Tracker!")
         while True:
             print("\nMenu:")
-            print("1, Add Employee")
+            print("1. Add Employee")
             print("2. Clock-in") 
             print("4. View Attendance")
             print("5. Exit")
@@ -67,9 +67,19 @@ class CoffeeShopAttendanceTracker:
             elif choice =='3':
                 employee_id = input("Enter Employee ID: ")
                 self.clock_out(employee_id)
-            elif choice = '4':
+
+            elif choice == '4':
                 self.view_attendance()
-            elif choice = '5':
-                print("Existing Brewattenend emplployee attendance tracker, good bye! ")
+
+            elif choice == '5':
+                print("Existing Brewattenend Emplployee attendanceTracker, Good bye! ")
+                break
+            else:
+                print("Invalid Choice. Please Enter a Number from 1 to 5.  ")
 
 
+#Main Program 
+
+if __name__== "__main__":
+    tracker = CoffeeShopAttendanceTracker()
+    tracker.run()
