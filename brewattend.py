@@ -23,6 +23,18 @@ class CoffeeShopAttendanceTracker:
                 'type': 'clock-in',
                 'timestamp': now
 
-                
             })
 
+            print(f"Clock-in recorded for employee '{self.employees[employee_id]['name']}' at {now}.")
+        else:
+            print(f" Employee with ID '{employee_id}' not found.")
+
+    def clock_out(self, employee_id):
+        if employee_id in self.add_employees:
+            now = datetime.now()
+            self.employees[employee_id]['attendance'].append({
+                'type': 'clock-out',
+                'timestamp': now
+            })
+            print(f"Clock out recorded for employee '{self.employees[employee_id][employee_id]['name']}' at{now}.")
+            
