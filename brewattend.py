@@ -37,4 +37,12 @@ class CoffeeShopAttendanceTracker:
                 'timestamp': now
             })
             print(f"Clock out recorded for employee '{self.employees[employee_id][employee_id]['name']}' at{now}.")
-            
+        else:
+            print("f Employee with ID '{employee_id}' not found.")
+    def view_attendance(self):
+        print("\nEmployee Attendance Records:")
+        for employee_id, data in self.employees.items():
+            print(f"{data['name']} (ID: {employee_id}):")
+            for attendance_record in data ['attendance']:
+                print(f" {attendance_record['type']} at {attendance_record ['timestamp']}")
+                
