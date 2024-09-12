@@ -58,7 +58,7 @@ class CoffeeShopAttendanceTracker:
             print("2. Clock-in") 
             print("4. View Attendance")
             print("5. Exit")
-            choice = input("Enter your choice (1-5): ") 
+            choice = input("Enter your first choice (1-5): ") 
             
 #enter the employee id
             if choice == '1':
